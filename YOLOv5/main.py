@@ -141,7 +141,7 @@ def identity(payload):
     return userid_table.get(userId, None)
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "9455cc145a41c28388955c9cf9c67508509946572cf90d0735b77724805f9893"
+app.config["SECRET_KEY"] = "" #RANDOM
 jwt = JWT(app, authentication_handler=auth, identity_handler=identity)
 
 
